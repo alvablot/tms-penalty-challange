@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <head>
+    <title>Untitled</title>
+    <style>
+      .point {
+        font: 12px arial;
+        background-color: white;
+        padding: 2px;
+        border: 1px solid #666666;
+        color: #333333;
+      }
+
+      .b {
+        font-weight: bold;
+      }
+    </style>
+    <script>
+      function disableselect(e) {
+        return false;
+      }
+      function reEnable() {
+        return true;
+      }
+      //if IE4+
+      document.onselectstart = new Function("return false");
+      //if NS6
+      if (window.sidebar) {
+        document.onmousedown = disableselect;
+        document.onclick = reEnable;
+      }
+      function avbryt() {
+        return false;
+      }
+      document.oncontextmenu = avbryt;
+    </script>
+  </head>
+
+<body style="margin: 0">
+  <table cellspacing="18" cellpadding="2" border="0">
+    <tr>
+      <td valign="top">
+        <div class="point" style="width: 90px">
+          Nivå &nbsp;<span id="alla" class="b">1</span>
+        </div>
+        <div class="point" style="width: 90px">
+          Poäng &nbsp;<span id="poang" class="b">0</span>
+        </div>
+        <div class="point" style="width: 90px">
+          Mål&nbsp; <span id="mal" class="b">0</span>
+        </div>
+      </td>
+      <td valign="top">
+        <div class="point" style="width: 170px">
+          Missar &nbsp;<span id="missar" class="b">0</span>
+        </div>
+        <div class="point" style="width: 170px">
+          Stolpträffar &nbsp;<span id="stolptraffar" class="b">0</span>
+        </div>
+        <div class="point" style="width: 170px">
+          Missar den här omgången &nbsp;<span id="rmiss" class="b">0</span>
+        </div>
+      </td>
+      <td valign="top" width="200">
+        <div class="point" style="width: 150px">
+          Namn &nbsp;<span id="namn" class="b">0</span>
+        </div>
+        <div class="point" style="width: 150px">
+          Speed &nbsp;<span id="speed" class="b">0</span>
+        </div>
+        <div class="point" style="width: 150px">
+          Skott &nbsp;<span id="skott" class="b">0</span>
+        </div>
+      </td>
+    </tr>
+    <div class="point" style="position: absolute; left: 527px; top: 5px; width: 60px">
+      <img src="trans.gif" align="right" />
+    </div>
+  </table>
+  <span id="malcheck" style="visibility: hidden">0</span>
+  <span id="match" style="visibility: hidden">0</span>
+  <span id="omgang" style="visibility: hidden">0</span>
+</body>
+
+</html>
