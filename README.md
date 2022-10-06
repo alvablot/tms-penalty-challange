@@ -1,6 +1,6 @@
 # tms-penalty-challange
 
-This is a game I totally "cowboy" coded back in 2004. And it still works!<br>
+This hockey penalty game I totally "cowboy" coded back in 2004. And it still works!<br>
 And it is actually quite fun! Try it and see if you can be in the 10 top list!
 
 #
